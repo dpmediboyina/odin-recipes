@@ -1,0 +1,108 @@
+:root {
+  --bg: #faf7f2;
+  --text: #1f1f1f;
+  --muted: #6b6b6b;
+  --gold: #edc935;
+  --green: #a7e3a0;
+  --red: #f0614f;
+  --grey: #d9d9d9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 3rem 1.5rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+h1 {
+  max-width: 600px;
+  margin: 0 auto 0.5rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.5px;
+  background: var(--gold);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(237, 201, 53, 0.35);
+}
+
+.tagline {
+  margin: 0 0 2.5rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ---------- Recipe cards ---------- */
+ul {
+  max-width: 600px;
+  margin: 2.5rem auto 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+li {
+  margin: 0;
+}
+
+li a {
+  display: block;
+  text-decoration: none;
+}
+
+button {
+  width: 100%;
+  padding: 1.1rem 1.25rem;
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--grey);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 3px;
+}
+
+/* ---------- Per-recipe colors ---------- */
+#featured button {
+  background: var(--gold);
+}
+
+.paniPuri button {
+  background: var(--green);
+}
+
+.butterChicken button {
+  background: var(--red);
+  color: #fff;
+}
+
+.kajuburfey button {
+  background: var(--grey);
+}
